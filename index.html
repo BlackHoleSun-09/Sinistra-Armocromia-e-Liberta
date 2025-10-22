@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinistra, Armocromia e Libertà</title>
-
   <style>
-    /* Palette Primavera Calda professionale */
+    /* Palette Primavera Calda */
     :root {
       --corallo: #FF6F61;
       --pesca: #FF9C8B;
@@ -24,7 +23,7 @@
       --azzurro-caldo: #81D4FA;
       --bianco: #ffffff;
       --nero: #000000;
-      --testo: #FBF3D3;
+      --testo: #222222;
     }
 
     html, body {
@@ -38,9 +37,14 @@
       flex-direction: column;
       min-height: 100vh;
     }
-  
+
+    header {
+      margin: 40px 0 20px 0;
+    }
+    
     .logo img {
       width: 200px;
+      height: 200px;
       max-width: 50%;
       border-radius: 50%;
       object-fit: cover;
@@ -53,29 +57,6 @@
       box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
       animation: neonPulse 3s ease-in-out infinite;
     }
-
-    .social-icons a {
-      color: #39ff14;
-      margin-left: 15px;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
-
-    .social-icons a:hover {
-      color: #ffffff;
-    }
-    
-    .social-icons {
-        margin-top: 10px;
-      }
-    }
-
-    @media (max-width: 600px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
 
     @keyframes neonPulse {
       0%, 100% {
@@ -159,16 +140,17 @@
 
   <main>
     <!-- Slogan principale -->
-    <p class="slogan">Armocromia di stato qui e ora</p>
+    <p class="slogan">Armocromia di stato, qui e ora!</p>
 
     <!-- Paragrafo principale -->
-    <p><span class="highlight">Integrazione, Inclusività, Sostenibilità</span></p>
+    <p class="highlight">Integrazione, Inclusività, Sostenibilità</p>
 
     <!-- Immagine centrale -->
     <div class="image-placeholder">
-      <img src="https://via.placeholder.com/500x300.png?text=La+tua+immagine" alt="Immagine campagna">
+      <img src="https://www.shutterstock.com/image-photo/concept-belonging-inclusion-idea-symbol-600nw-2476442817.jpg" alt="Immagine campagna">
     </div>
-  </main> 
+  </main>
+
   <footer>
     2025 - Sinistra, Armocromia e Libertà
   </footer>
