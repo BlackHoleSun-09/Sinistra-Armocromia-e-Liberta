@@ -5,16 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinistra, Armocromia e Libertà</title>
   <style>
-    /* 🌸 Palette Primavera Calda potenziata */
+    /* 🌸 Palette Primavera Calda con contrasti leggibili */
     :root {
       --corallo: #FF6F61;
-      --pesca: #FF8A65;
+      --pesca: #FF9C8B;
       --giallo-sole: #FFD54F;
       --verde-chiaro: #A8E6CF;
       --azzurro-caldo: #81D4FA;
-      --sfondo-card: #fff8f0;
-      --testo: #333;
-      --ombra-card: rgba(0,0,0,0.25);
+      --bianco: #ffffff;
+      --testo: #222222;
     }
 
     html, body {
@@ -22,90 +21,51 @@
       padding: 0;
       overflow-x: hidden;
       font-family: "Helvetica Neue", Arial, sans-serif;
-      background: linear-gradient(135deg, var(--corallo), var(--pesca), var(--giallo-sole), var(--verde-chiaro), var(--azzurro-caldo));
-      background-size: 400% 400%;
-      animation: gradientShift 15s ease infinite;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      background: #FFFAF0; /* colore chiaro e neutro per leggibilità */
       color: var(--testo);
       text-align: center;
-      padding: 20px;
-      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .card {
-      background: linear-gradient(135deg, var(--corallo), var(--pesca), var(--giallo-sole), var(--verde-chiaro));
-      padding: 30px 20px;
-      border-radius: 25px;
-      max-width: 700px;
-      width: 100%;
-      margin: 0 auto;
-      box-shadow: 0 10px 30px var(--ombra-card);
-      position: relative;
-      transition: transform 0.3s ease;
-      box-sizing: border-box;
-      color: #fff;
-    }
-
-    .card:hover {
-      transform: scale(1.02);
-    }
-
-    /* Logo come immagine */
-    .logo {
-      width: 100px;
-      max-width: 25%;
-      margin: 0 auto 20px;
+    header {
+      margin: 40px 0 20px 0;
     }
 
     .logo img {
-      width: 100%;
-      height: auto;
+      width: 120px;
+      max-width: 25%;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
-    /* Slogan principale con gradient animato */
     .slogan {
-      font-size: 1.8em;
+      font-size: 2em;
       font-weight: bold;
-      background: linear-gradient(90deg, #FF6F61, #FFD54F, #A8E6CF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientText 5s linear infinite;
-      margin: 20px 0;
-    }
-
-    @keyframes gradientText {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      margin: 20px 20px;
+      color: var(--corallo);
+      line-height: 1.2em;
     }
 
     p {
-      font-size: 1em;
-      line-height: 1.5;
-      margin-bottom: 20px;
-      color: #fff;
-      text-shadow: 0 0 5px rgba(0,0,0,0.3);
+      font-size: 1.2em;
+      margin: 20px auto;
+      max-width: 600px;
+      line-height: 1.5em;
+      color: var(--testo);
+    }
+
+    .highlight {
+      color: var(--giallo-sole);
+      font-weight: bold;
     }
 
     .image-placeholder {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      aspect-ratio: 16/9;
-      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
+      margin: 30px auto;
       border-radius: 15px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -113,54 +73,60 @@
 
     .image-placeholder img {
       width: 100%;
-      height: 100%;
+      height: auto;
       object-fit: cover;
       border-radius: 15px;
       transition: transform 0.3s ease;
     }
 
     .image-placeholder:hover img {
-      transform: scale(1.05);
+      transform: scale(1.03);
     }
 
     footer {
-      margin-top: 20px;
+      margin-top: auto;
+      padding: 15px 0;
       font-size: 0.9em;
+      color: var(--testo);
       text-align: center;
-      width: 100%;
-      box-sizing: border-box;
-      color: #fff;
-      text-shadow: 0 0 3px rgba(0,0,0,0.3);
+      background: #f5f5f5;
+    }
+
+    /* Gradient sottile per piccoli dettagli, credibile */
+    .gradient-bg {
+      background: linear-gradient(45deg, var(--corallo) 0%, var(--pesca) 50%, var(--giallo-sole) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     /* Responsive adjustments */
     @media (max-width: 500px) {
-      .slogan { font-size: 1.5em; }
-      .logo { width: 80px; max-width: 30%; }
+      .logo img { width: 100px; }
+      .slogan { font-size: 1.6em; margin: 15px; }
+      p { font-size: 1em; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="logo">
-      <img src="https://via.placeholder.com/150.png?text=Logo" alt="Logo Sinistra, Armocromia e Libertà">
-    </div>
+  <header class="logo">
+    <img src="https://via.placeholder.com/150.png?text=Logo" alt="Logo Sinistra, Armocromia e Libertà">
+  </header>
 
-    <!-- Slogan principale -->
-    <p class="slogan">“Armocromia di stato, qui e ora”</p>
+  <main>
+    <!-- Slogan principale con gradient sottile -->
+    <p class="slogan gradient-bg">“Armocromia di stato, qui e ora”</p>
 
-    <!-- Paragrafo principale -->
-    <p>
-      L'Armocromia salverà il mondo. Armocromia significa integrazione, inclusività e sostenibilità.
-    </p>
+    <!-- Paragrafo principale leggibile -->
+    <p>L'Armocromia salverà il mondo. <span class="highlight">Armocromia</span> significa integrazione, inclusività e sostenibilità.</p>
 
+    <!-- Immagine centrale -->
     <div class="image-placeholder">
-      <img src="https://via.placeholder.com/400x225.png?text=La+tua+immagine" alt="Immagine campagna">
+      <img src="https://via.placeholder.com/500x300.png?text=La+tua+immagine" alt="Immagine campagna">
     </div>
-  </div>
+  </main>
 
   <footer>
-    © 2025 – Iniziativa tematica sull’armocromia
+    2025 - Sinistra, Armocromia e Libertà
   </footer>
 </body>
 </html>
