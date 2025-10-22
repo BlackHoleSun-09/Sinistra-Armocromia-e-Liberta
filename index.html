@@ -3,34 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Armocromia di Stato qui ed ora!</title>
+  <title>Sinistra, Armocromia e Libertà</title>
   <style>
-    /* 🌸 Palette Primavera Calda */
+    /* 🌸 Palette Primavera Calda potenziata */
     :root {
       --corallo: #FF6F61;
-      --pesca: #FFAB91;
-      --giallo-sole: #FFD166;
+      --pesca: #FF8A65;
+      --giallo-sole: #FFD54F;
       --verde-chiaro: #A8E6CF;
       --azzurro-caldo: #81D4FA;
-      --verde-elettrico: #39FF14;
       --sfondo-card: #fff8f0;
       --testo: #333;
-      --ombra-card: rgba(0,0,0,0.2);
+      --ombra-card: rgba(0,0,0,0.25);
     }
 
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      overflow-x: hidden;
       font-family: "Helvetica Neue", Arial, sans-serif;
       background: linear-gradient(135deg, var(--corallo), var(--pesca), var(--giallo-sole), var(--verde-chiaro), var(--azzurro-caldo));
       background-size: 400% 400%;
       animation: gradientShift 15s ease infinite;
-      color: var(--testo);
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      color: var(--testo);
       text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
     }
 
     @keyframes gradientShift {
@@ -40,82 +43,43 @@
     }
 
     .card {
-      background: var(--sfondo-card);
+      background: linear-gradient(135deg, var(--corallo), var(--pesca), var(--giallo-sole), var(--verde-chiaro));
       padding: 30px 20px;
       border-radius: 25px;
       max-width: 700px;
       width: 100%;
+      margin: 0 auto;
       box-shadow: 0 10px 30px var(--ombra-card);
-      border: 4px solid transparent;
-      background-clip: padding-box;
       position: relative;
       transition: transform 0.3s ease;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      top: -4px; left: -4px; right: -4px; bottom: -4px;
-      z-index: -1;
-      border-radius: 30px;
-      background: linear-gradient(45deg, var(--corallo), var(--pesca), var(--giallo-sole), var(--verde-chiaro), var(--azzurro-caldo));
+      box-sizing: border-box;
+      color: #fff;
     }
 
     .card:hover {
       transform: scale(1.02);
     }
 
-    /* Logo neon pulsante */
+    /* Logo come immagine */
     .logo {
-      width: 80px;
-      height: 80px;
-      background: var(--verde-elettrico);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      width: 100px;
+      max-width: 25%;
       margin: 0 auto 20px;
-      box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
-      animation: neonPulse 3s ease-in-out infinite;
     }
 
-    .logo span {
-      font-size: 1.6em;
-      font-weight: bold;
-      color: #111;
-      text-shadow: 0 0 5px rgba(57, 255, 20, 0.8);
+    .logo img {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
     }
 
-    @keyframes neonPulse {
-      0%, 100% {
-        box-shadow: 0 0 20px rgba(57, 255, 20, 0.5),
-                    0 0 40px rgba(57, 255, 20, 0.3),
-                    0 0 60px rgba(57, 255, 20, 0.1);
-      }
-      50% {
-        box-shadow: 0 0 30px rgba(57, 255, 20, 0.9),
-                    0 0 60px rgba(57, 255, 20, 0.6),
-                    0 0 100px rgba(57, 255, 20, 0.4);
-      }
-    }
-
-    h1 {
-      font-size: 2.2em;
-      color: var(--corallo);
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.2em;
-      color: var(--pesca);
-      margin-bottom: 20px;
-    }
-
-    /* Slogan gradient animato */
+    /* Slogan principale con gradient animato */
     .slogan {
-      font-size: 1.6em;
+      font-size: 1.8em;
       font-weight: bold;
-      background: linear-gradient(90deg, var(--corallo), var(--giallo-sole), var(--verde-chiaro));
+      background: linear-gradient(90deg, #FF6F61, #FFD54F, #A8E6CF);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: gradientText 5s linear infinite;
@@ -131,26 +95,20 @@
     p {
       font-size: 1em;
       line-height: 1.5;
-      color: var(--testo);
       margin-bottom: 20px;
+      color: #fff;
+      text-shadow: 0 0 5px rgba(0,0,0,0.3);
     }
 
-    /* Spazio per immagine con effetto hover */
     .image-placeholder {
       width: 100%;
       max-width: 400px;
       height: auto;
       aspect-ratio: 16/9;
       margin: 20px auto;
-      background: #eee;
       border-radius: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #aaa;
-      font-size: 1.2em;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
       overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .image-placeholder img {
@@ -168,44 +126,41 @@
     footer {
       margin-top: 20px;
       font-size: 0.9em;
-      color: #555;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+      color: #fff;
+      text-shadow: 0 0 3px rgba(0,0,0,0.3);
     }
 
     /* Responsive adjustments */
     @media (max-width: 500px) {
-      h1 { font-size: 1.8em; }
-      h2 { font-size: 1em; }
-      .slogan { font-size: 1.4em; }
-      .logo { width: 70px; height: 70px; }
-      .logo span { font-size: 1.4em; }
+      .slogan { font-size: 1.5em; }
+      .logo { width: 80px; max-width: 30%; }
     }
   </style>
 </head>
 <body>
   <div class="card">
     <div class="logo">
-      <span>EV</span>
+      <img src="https://via.placeholder.com/150.png?text=Logo" alt="Logo Sinistra, Armocromia e Libertà">
     </div>
 
-    <h1>Campagna Armocromia</h1>
-    <h2>Portavoce: Elettra Verdini</h2>
-
+    <!-- Slogan principale -->
     <p class="slogan">“Armocromia di stato, qui e ora”</p>
 
+    <!-- Paragrafo principale -->
     <p>
-      L'Armocromia salverà il mondo.
-      Armocromia significa integrazione, inclusività e sostenibilità.
+      L'Armocromia salverà il mondo. Armocromia significa integrazione, inclusività e sostenibilità.
     </p>
 
-    <!-- Spazio immagine reale -->
     <div class="image-placeholder">
-      <!-- Inserisci qui la tua immagine sostituendo src -->
       <img src="https://via.placeholder.com/400x225.png?text=La+tua+immagine" alt="Immagine campagna">
     </div>
   </div>
 
   <footer>
-    © 2025 – Sinistra, Armocromia e Libertà
+    © 2025 – Iniziativa tematica sull’armocromia
   </footer>
 </body>
 </html>
