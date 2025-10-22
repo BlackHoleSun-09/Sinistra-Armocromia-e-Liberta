@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campagna Armocromia</title>
+  <style>
+    /* 🌈 Palette ispirata ai colori Pantone 2025 */
+    :root {
+      --corallo: #ff6f61;
+      --sabbia: #f5deb3;
+      --verde-acqua: #88d8c0;
+      --azzurro: #a2cffe;
+      --crema: #fff8e7;
+      --verde-elettrico: #39ff14;
+      --testo: #333;
+      --ombra-card: rgba(0,0,0,0.15);
+      --sfondo-card: rgba(255,255,255,0.85);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --corallo: #ff8369;
+        --sabbia: #b79e67;
+        --verde-acqua: #5cbfa0;
+        --azzurro: #78b8ff;
+        --crema: #1e1e1e;
+        --testo: #eee;
+        --ombra-card: rgba(0,0,0,0.5);
+        --sfondo-card: rgba(20,20,20,0.8);
+      }
+    }
+
+    body {
+      margin: 0;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(
+        120deg,
+        var(--corallo),
+        var(--sabbia),
+        var(--verde-acqua),
+        var(--azzurro)
+      );
+      background-size: 300% 300%;
+      animation: gradientShift 15s ease infinite;
+      color: var(--testo);
+      text-align: center;
+      padding: 60px 20px;
+      transition: background 1s ease, color 0.5s ease;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .card {
+      background: var(--sfondo-card);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 10px 25px var(--ombra-card);
+      transition: transform 0.3s ease, background 0.5s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    /* ⚡ Logo circolare verde elettrico */
+    .logo {
+      width: 90px;
+      height: 90px;
+      background: var(--verde-elettrico);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 25px;
+      box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
+      animation: neonPulse 3s ease-in-out infinite;
+    }
+
+    .logo span {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #111;
+      letter-spacing: 1px;
+      text-shadow: 0 0 5px rgba(57, 255, 20, 0.8);
+    }
+
+    @keyframes neonPulse {
+      0%, 100% {
+        box-shadow: 0 0 20px rgba(57, 255, 20, 0.5),
+                    0 0 40px rgba(57, 255, 20, 0.3),
+                    0 0 60px rgba(57, 255, 20, 0.1);
+      }
+      50% {
+        box-shadow: 0 0 30px rgba(57, 255, 20, 0.9),
+                    0 0 60px rgba(57, 255, 20, 0.6),
+                    0 0 100px rgba(57, 255, 20, 0.4);
+      }
+    }
+
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      color: var(--corallo);
+    }
+
+    h2 {
+      font-size: 1.2em;
+      color: #777;
+      margin-bottom: 25px;
+    }
+
+    .slogan {
+      font-size: 1.8em;
+      font-weight: bold;
+      color: var(--verde-acqua);
+      margin: 30px 0;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 1.1em;
+      color: var(--testo);
+    }
+
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .logo span {
+        color: #111;
+      }
+      footer {
+        color: #aaa;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="logo">
+      <span>EV</span>
+    </div>
+
+    <h1>Campagna sull’Armocromia</h1>
+    <h2>Portavoce: Elettra Verdini</h2>
+
+    <p class="slogan">“Armocromia di stato, qui e ora”</p>
+
+    <p>
+      Una celebrazione dell’armonia dei colori e della bellezza nelle sfumature.
+      <br><br>
+      Questa iniziativa invita a guardare al mondo attraverso la lente dell’equilibrio cromatico,
+      del rispetto delle tonalità naturali e dell’armonia tra persone e ambiente.
+    </p>
+  </div>
+
+  <footer>
+    © 2025 – Iniziativa tematica sull’armocromia e il colore
+  </footer>
+</body>
+</html>
