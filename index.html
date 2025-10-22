@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinistra, Armocromia e Libertà</title>
   <style>
-    /* 🌸 Palette Primavera Calda con contrasti leggibili */
+    /* Palette Primavera Calda professionale */
     :root {
       --corallo: #FF6F61;
       --pesca: #FF9C8B;
@@ -19,9 +19,8 @@
     html, body {
       margin: 0;
       padding: 0;
-      overflow-x: hidden;
       font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #FFFAF0; /* colore chiaro e neutro per leggibilità */
+      background: #FFFAF0;
       color: var(--testo);
       text-align: center;
       display: flex;
@@ -41,16 +40,18 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
 
+    /* Slogan principale con dimensioni standard */
     .slogan {
-      font-size: 2em;
+      font-size: 2.5rem; /* desktop */
       font-weight: bold;
-      margin: 20px 20px;
+      margin: 20px;
       color: var(--corallo);
       line-height: 1.2em;
     }
 
+    /* Paragrafo principale */
     p {
-      font-size: 1.2em;
+      font-size: 1.2rem; /* desktop */
       margin: 20px auto;
       max-width: 600px;
       line-height: 1.5em;
@@ -86,24 +87,18 @@
     footer {
       margin-top: auto;
       padding: 15px 0;
-      font-size: 0.9em;
+      font-size: 0.9rem;
       color: var(--testo);
       text-align: center;
       background: #f5f5f5;
     }
 
-    /* Gradient sottile per piccoli dettagli, credibile */
-    .gradient-bg {
-      background: linear-gradient(45deg, var(--corallo) 0%, var(--pesca) 50%, var(--giallo-sole) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
     /* Responsive adjustments */
     @media (max-width: 500px) {
       .logo img { width: 100px; }
-      .slogan { font-size: 1.6em; margin: 15px; }
-      p { font-size: 1em; }
+      .slogan { font-size: 1.8rem; margin: 15px; }
+      p { font-size: 1rem; }
+      footer { font-size: 0.8rem; }
     }
   </style>
 </head>
@@ -113,10 +108,10 @@
   </header>
 
   <main>
-    <!-- Slogan principale con gradient sottile -->
-    <p class="slogan gradient-bg">“Armocromia di stato, qui e ora”</p>
+    <!-- Slogan principale -->
+    <p class="slogan">“Armocromia di stato, qui e ora”</p>
 
-    <!-- Paragrafo principale leggibile -->
+    <!-- Paragrafo principale -->
     <p>L'Armocromia salverà il mondo. <span class="highlight">Armocromia</span> significa integrazione, inclusività e sostenibilità.</p>
 
     <!-- Immagine centrale -->
