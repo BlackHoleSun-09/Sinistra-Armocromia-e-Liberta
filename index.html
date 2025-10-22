@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sinistra, Armocromia e Libertà</title>
+    <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     /* Palette Primavera Calda professionale */
     :root {
@@ -39,7 +41,11 @@
     }
 
     header {
-      margin: 40px 0 20px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #1a1a1a;
     }
     
     .logo img {
@@ -56,6 +62,29 @@
       box-shadow: 0 0 25px rgba(57, 255, 20, 0.6);
       animation: neonPulse 3s ease-in-out infinite;
     }
+
+    .social-icons a {
+      color: #39ff14;
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffffff;
+    }
+    
+    .social-icons {
+        margin-top: 10px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
     @keyframes neonPulse {
       0%, 100% {
@@ -149,7 +178,16 @@
       <img src="https://via.placeholder.com/500x300.png?text=La+tua+immagine" alt="Immagine campagna">
     </div>
   </main>
-
+<header>
+    <div class="social-icons">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</header>
+  
   <footer>
     2025 - Sinistra, Armocromia e Libertà
   </footer>
